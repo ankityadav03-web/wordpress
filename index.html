@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WordPress Login Clone - GET Method</title>
+    <style>
+        body {
+            background-color: #f0f0f1;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+        }
+
+        .login-container {
+            width: 100%;
+            max-width: 320px;
+            padding: 20px;
+        }
+
+        .logo {
+            text-align: center;
+            margin-bottom: 25px;
+            color: #3c434a;
+        }
+        
+        .logo-text {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 24px;
+            font-weight: 700;
+            letter-spacing: -0.5px;
+        }
+
+        .logo-icon {
+            background: #3c434a;
+            color: white;
+            border-radius: 50%;
+            width: 35px;
+            height: 35px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 8px;
+            font-size: 22px;
+        }
+
+        .login-card {
+            background: #fff;
+            padding: 24px;
+            border: 1px solid #c3c4c7;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.04);
+        }
+
+        .intro-text {
+            font-size: 14px;
+            line-height: 1.5;
+            margin-bottom: 20px;
+            color: #3c434a;
+        }
+
+        .input-group {
+            margin-bottom: 16px;
+        }
+
+        label {
+            display: block;
+            font-size: 14px;
+            margin-bottom: 5px;
+            color: #3c434a;
+        }
+
+        input[type="text"],
+        input[type="password"] {
+            width: 100%;
+            padding: 10px;
+            font-size: 20px;
+            border: 1px solid #dcdcde;
+            border-radius: 4px;
+            box-sizing: border-box;
+            background-color: #fbfbfb;
+        }
+
+        .password-wrapper {
+            position: relative;
+        }
+        
+        .eye-icon {
+            position: absolute;
+            right: 12px;
+            top: 50%;
+            transform: translateY(-50%);
+            color: #2271b1;
+            cursor: pointer;
+        }
+
+        .checkbox-group {
+            display: flex;
+            align-items: center;
+            margin-bottom: 12px;
+        }
+
+        .checkbox-group input {
+            margin: 0 10px 0 0;
+            width: 16px;
+            height: 16px;
+        }
+
+        .login-btn {
+            width: 100%;
+            background-color: #2271b1;
+            color: white;
+            border: 1px solid #2271b1;
+            padding: 10px;
+            font-size: 14px;
+            font-weight: 600;
+            border-radius: 4px;
+            cursor: pointer;
+            margin-top: 10px;
+        }
+
+        .login-footer {
+            margin-top: 25px;
+            text-align: center;
+            font-size: 13px;
+        }
+
+        .footer-links {
+            margin-bottom: 25px;
+        }
+
+        .login-footer a {
+            color: #3c434a;
+            text-decoration: none;
+        }
+
+        .language-selector {
+            display: inline-flex;
+            align-items: center;
+            background: #fff;
+            border: 1px solid #8c8f94;
+            border-radius: 3px;
+            padding: 4px 8px;
+        }
+
+        .language-selector select {
+            border: none;
+            background: transparent;
+            outline: none;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="login-container">
+        <div class="logo">
+            <div class="logo-text">
+                <span class="logo-icon">W</span> WORDPRESS.ORG
+            </div>
+        </div>
+
+        <div class="login-card">
+            <p class="intro-text">
+                Log in to your WordPress.org account to contribute to WordPress, get help in the support forum, or rate and review themes and plugins.
+            </p>
+
+            <form action="" method="GET">
+                <div class="input-group">
+                    <label for="user_login">Username or Email Address</label>
+                    <input type="text" id="user_login" name="user_login" required>
+                </div>
+
+                <div class="input-group">
+                    <label for="user_pass">Password</label>
+                    <div class="password-wrapper">
+                        <input type="password" id="user_pass" name="user_pass" required>
+                        <span class="eye-icon">👁</span>
+                    </div>
+                </div>
+
+                <div class="checkbox-group">
+                    <input type="checkbox" id="pineapple" name="pineapple_on_pizza" value="yes">
+                    <label for="pineapple">Pineapple is delicious on pizza</label>
+                </div>
+
+                <div class="checkbox-group">
+                    <input type="checkbox" id="rememberme" name="rememberme">
+                    <label for="rememberme">Remember me</label>
+                </div>
+
+                <button type="submit" class="login-btn">Log In</button>
+            </form>
+        </div>
+
+        <div class="login-footer">
+            <div class="footer-links">
+                <a href="#">Lost your password?</a> &nbsp;•&nbsp; <a href="#">Create an account</a>
+            </div>
+            
+            <div class="language-selector">
+                <span>🌐</span>
+                <select name="language">
+                    <option value="en_US">English</option>
+                </select>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
